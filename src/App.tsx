@@ -1,26 +1,69 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { HvInputText } from "hv-styleguide-react/src/components";
+
+import "./App.css";
 
 const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+	const [form, setState] = useState({
+		firstName: "React",
+		lastName: "Example"
+	});
+
+	const updateField = (event: any) => {
+		setState({
+			...form,
+			[event.target.name]: event.target.value
+		});
+	};
+
+	return (
+		<div className="App">
+			<section className="background--green">
+				<h1>React + Web Components</h1>
+			</section>
+
+			<section className="background--white">
+				<h3>Web component Input</h3>
+				<HvInputText
+					label="First name"
+					name="firstName"
+					value={form.firstName}
+					onChange={(event) => {
+						console.log("test");
+						updateField(event);
+						console.log(event);
+					}}
+				></HvInputText>
+
+				<HvInputText
+					label="Last name"
+					name="lastName"
+					value={form.lastName}
+					onChange={updateField}
+					onEventBindValue={updateField}
+				></HvInputText>
+			</section>
+
+			<section className="background--champagne">
+				<h3>Default HTML Input</h3>
+				<input
+					name="firstName"
+					value={form.firstName}
+					onChange={updateField}
+				></input>
+				<input
+					name="lastName"
+					value={form.lastName}
+					onChange={updateField}
+				></input>
+			</section>
+			<section className="background--blue">
+				<strong>
+					<pre>{JSON.stringify(form)}</pre>
+				</strong>
+			</section>
+		</div>
+	);
+};
 
 export default App;
