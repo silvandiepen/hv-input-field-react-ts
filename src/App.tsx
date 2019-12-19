@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { HvInputText } from "hv-styleguide-react/src/components";
+import { HvInputText } from "hv-styleguide-react";
 
 import "./App.css";
 
@@ -24,24 +24,36 @@ const App: React.FC = () => {
 
 			<section className="background--white">
 				<h3>Web component Input</h3>
-				<HvInputText
+				{/* <HvInputText
+					elementId="firstname"
 					label="First name"
 					name="firstName"
 					value={form.firstName}
-					onChange={(event) => {
+					onChange={(event: any) => {
 						console.log("test");
 						updateField(event);
 						console.log(event);
 					}}
-				></HvInputText>
+				></HvInputText> */}
+				{/* <HvInputText
+					elementId="firstname"
+					label="First name"
+					name="firstName"
+					value={form.firstName}
+					onChange={(event: any) => {
+						console.log("test");
+						updateField(event);
+						console.log(event);
+					}}
+				></HvInputText> */}
 
-				<HvInputText
+				{/* <HvInputText
+					elementId="lastname"
 					label="Last name"
 					name="lastName"
 					value={form.lastName}
 					onChange={updateField}
-					onEventBindValue={updateField}
-				></HvInputText>
+				></HvInputText> */}
 			</section>
 
 			<section className="background--champagne">
