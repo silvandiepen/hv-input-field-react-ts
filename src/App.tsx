@@ -29,22 +29,14 @@ const App: React.FC = () => {
 					label="First name"
 					name="firstName"
 					value={form.firstName}
-					onBindValue={(event: any) => {
-						console.log("test");
-						updateField(event);
-						console.log(event);
-					}}
+					onBindValue={(e: any) => updateField(e)}
 				></HvInputText>
 				<HvInputText
 					elementId="lastname"
 					label="Last name"
 					name="lastName"
 					value={form.lastName}
-					onBindValue={(event: any) => {
-						console.log("test");
-						updateField(event);
-						console.log(event);
-					}}
+					onBindValue={(e: any) => updateField(e)}
 				></HvInputText>
 			</section>
 
