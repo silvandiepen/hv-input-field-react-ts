@@ -22,9 +22,9 @@ section {
 	color: white;
 	background-color: #2800a0;
 }
-input-field {
+hv-input-text {
 	display: block;
 }
-input-field + input-field {
+hv-input-text + hv-input-text {
 	margin-top: 1rem;
 }

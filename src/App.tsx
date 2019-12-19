@@ -24,36 +24,28 @@ const App: React.FC = () => {
 
 			<section className="background--white">
 				<h3>Web component Input</h3>
-				{/* <HvInputText
+				<HvInputText
 					elementId="firstname"
 					label="First name"
 					name="firstName"
 					value={form.firstName}
-					onChange={(event: any) => {
+					onBindValue={(event: any) => {
 						console.log("test");
 						updateField(event);
 						console.log(event);
 					}}
-				></HvInputText> */}
-				{/* <HvInputText
-					elementId="firstname"
-					label="First name"
-					name="firstName"
-					value={form.firstName}
-					onChange={(event: any) => {
-						console.log("test");
-						updateField(event);
-						console.log(event);
-					}}
-				></HvInputText> */}
-
-				{/* <HvInputText
+				></HvInputText>
+				<HvInputText
 					elementId="lastname"
 					label="Last name"
 					name="lastName"
 					value={form.lastName}
-					onChange={updateField}
-				></HvInputText> */}
+					onBindValue={(event: any) => {
+						console.log("test");
+						updateField(event);
+						console.log(event);
+					}}
+				></HvInputText>
 			</section>
 
 			<section className="background--champagne">
