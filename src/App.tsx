@@ -29,14 +29,14 @@ const App: React.FC = () => {
 					label="First name"
 					name="firstName"
 					value={form.firstName}
-					onBindValue={(e: any) => updateField(e)}
+					onBindValue={updateField}
 				></HvInputText>
 				<HvInputText
 					elementId="lastname"
 					label="Last name"
 					name="lastName"
 					value={form.lastName}
-					onBindValue={(e: any) => updateField(e)}
+					onBindValue={updateField}
 				></HvInputText>
 			</section>
 
