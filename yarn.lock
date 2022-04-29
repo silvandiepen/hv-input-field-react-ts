@@ -1910,9 +1910,9 @@ async-limiter@~1.0.0:
   integrity sha512-csOlWGAcRFJaI6m+F2WKdnMKr4HhdhFVBk0H/QbJFMCr+uO2kwohwXQPxw/9OCxp05r5ghVBFSyioixx3gfkNQ==
 
 async@^2.6.2:
-  version "2.6.3"
-  resolved "https://registry.yarnpkg.com/async/-/async-2.6.3.tgz#d72625e2344a3656e3a3ad4fa749fa83299d82ff"
-  integrity sha512-zflvls11DCy+dQWzTW2dzuilv8Z5X/pjfmZOWba6TNIVDm+2UDaJmXSOXlasHKfNBs8oo3M0aT50fDEWfKZjXg==
+  version "2.6.4"
+  resolved "https://registry.yarnpkg.com/async/-/async-2.6.4.tgz#706b7ff6084664cd7eae713f6f965433b5504221"
+  integrity sha512-mzo5dfJYwAn29PeiJ0zvwTo04zj8HDJj0Mn8TD7sno7q12prdbnasKJHhkm2c1LgrhlJ0teaea8860oxi51mGA==
   dependencies:
     lodash "^4.17.14"
 
@@ -3562,6 +3562,11 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
+ejs@^2.6.1:
+  version "2.7.4"
+  resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.7.4.tgz#48661287573dcc53e366c7a1ae52c3a120eec9ba"
+  integrity sha512-7vmuyh5+kuUyJKePhQfRQBhXV5Ce+RnaeeQArKu1EAMpL3WbgMt5WG6uQZpEVvYSSsxMXRKOewtDk9RaTKXRlA==
+
 electron-to-chromium@^1.3.306, electron-to-chromium@^1.3.317:
   version "1.3.322"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.322.tgz#a6f7e1c79025c2b05838e8e344f6e89eb83213a8"
@@ -4876,6 +4881,37 @@ https-browserify@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
   integrity sha1-7AbBDgo0wPL68Zn3/X/Hj//QPHM=
+
+hv-color@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/hv-color/-/hv-color-0.0.2.tgz#467a66d2b706cbbc3251c261f5c58315b291554b"
+  integrity sha512-7eGR1/5q2M2N4r4Dabs9TNqwTVOlyxb3G15fj4O/qCMGcrmvT1LO9PGI/EJANE7dhEZfk198FVReq5muCc1YEA==
+  dependencies:
+    ejs "^2.6.1"
+    handlebars "^4.1.2"
+    prettier "^1.17.0"
+
+hv-style@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/hv-style/-/hv-style-0.0.1.tgz#062ef94b1e0684344d4971dc44e331f3fc5a15ce"
+  integrity sha512-puKi638Y2bdT+h20SwW18Nvj+2NRogFea2I8RJdkECDzJkKUy8XrIhzuo3TWKGNwxsfKWRROdPdAZfvg6HIX6Q==
+  dependencies:
+    hv-color "0.0.2"
+
+hv-styleguide-react@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/hv-styleguide-react/-/hv-styleguide-react-0.0.1.tgz#fa8ba4ba8bb6134e09f19e94f0c400dbe477fae5"
+  integrity sha512-n9ajnEhZFKlGxI7y+aFCf0ZGTtCoIqIuQs+6kw6dRHWZJblTbIRyfshFfMcQySCceGHuRzqYKQLx8gCcbLURdA==
+  dependencies:
+    hv-styleguide "git+https://github.com/silvandiepen/hv-styleguide.git"
+
+hv-styleguide@^0.0.1, "hv-styleguide@git+https://github.com/silvandiepen/hv-styleguide.git":
+  version "0.0.1"
+  uid "26535329a0eee4fad188a3a38669fe0395fa5c68"
+  resolved "git+https://github.com/silvandiepen/hv-styleguide.git#26535329a0eee4fad188a3a38669fe0395fa5c68"
+  dependencies:
+    hv-color "0.0.2"
+    hv-style "0.0.1"
 
 iconv-lite@0.4.24, iconv-lite@^0.4.24, iconv-lite@^0.4.4:
   version "0.4.24"
@@ -6199,9 +6235,9 @@ lodash.uniq@^4.5.0:
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
 "lodash@>=3.5 <5", lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.5:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 loglevel@^1.6.4:
   version "1.6.6"
@@ -8086,6 +8122,11 @@ prepend-http@^1.0.0:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
   integrity sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
+
+prettier@^1.17.0:
+  version "1.19.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.19.1.tgz#f7d7f5ff8a9cd872a7be4ca142095956a60797cb"
+  integrity sha512-s7PoyDv/II1ObgQunCbB9PdLmUcBZcnWOcxDh7O0N/UwDEsHyqkW+Qh28jW+mVuCdx7gLB0BotYI1Y6uI9iyew==
 
 pretty-bytes@^5.1.0:
   version "5.3.0"
